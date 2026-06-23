@@ -11,7 +11,7 @@ function App() {
       <CakeContainer />
       <MilkContainer />
       <hr />
-      {/* <UsersList /> */}
+      <UsersList />
     </Provider>
   );
 }
