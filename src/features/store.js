@@ -7,7 +7,8 @@ const store = configureStore({
   reducer: {
     cake: cakeReducer,
     milk: milkReducer,
-    store: userReducer,
+    users: userReducer,
   },
 });
+
 export default store;

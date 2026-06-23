@@ -1,16 +1,15 @@
+import { createSlice } from "@reduxjs/toolkit";
+
 const initialState = {
   numOfMilks: 10,
 };
 
 const milkSlice = createSlice({
   name: "milk",
-  initialsState,
+  initialState,
   reducers: {
-    //buyCake: function(){}
-    //buyCake() {},
     buyMilk: (state, action) => {
       state.numOfMilks = state.numOfMilks - 1;
-      //immerjs => that allows us to mutate states!
     },
   },
 });
