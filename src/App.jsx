@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import "./App.css";
-import store from "./redux/store";
+import store from "./features/store";
 import CakeContainer from "./components/CakeContainer"; 
 import MilkContainer from "./components/MilkContainer";
 import UsersList from "./components/UsersList";
@@ -11,9 +11,11 @@ function App() {
       <CakeContainer />
       <MilkContainer />
       <hr />
-      <UsersList />
+      {/* <UsersList /> */}
     </Provider>
   );
 }
 
 export default App;
+
+

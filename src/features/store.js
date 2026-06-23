@@ -1,11 +1,9 @@
-import { applyMiddleware, createStore } from "redux";
-import rootReducer from "./rootReducer";
-import thunk from "redux-thunk";
-import { composeWithDevTools } from "@redux-devtools/extension";
+import { configureStore } from "@reduxjs/toolkit";
+import cakeReducer from "./cake/cakeSlice";
 
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk)),
-);
-
+const store = configureStore({
+  reducer: {
+    cake: cakeReducer,
+  },
+});
 export default store;
