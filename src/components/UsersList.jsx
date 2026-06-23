@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAsynceUsers } from "../features/user/userSlice";
+import { getAsyncUsers } from "../features/user/userSlice";
 
 function UsersList() {
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector((state) => state.users);
 
   useEffect(() => {
-    dispatch(getAsynceUsers());
+    dispatch(getAsyncUsers());
   }, [dispatch]);
 
   //   if (loading) return <p>loading...</p>;
