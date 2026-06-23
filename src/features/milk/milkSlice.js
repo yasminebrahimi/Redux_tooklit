@@ -9,7 +9,7 @@ const milkSlice = createSlice({
     //buyCake: function(){}
     //buyCake() {},
     buyMilk: (state, action) => {
-      state.numOfMilks = state.numOfMilks - action.payload;
+      state.numOfMilks = state.numOfMilks - 1;
       //immerjs => that allows us to mutate states!
     },
   },

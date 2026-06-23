@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { buyMilk } from "../redux/milk/milkActions";
+import { buyMilk } from "../features/milk/milkActions";
 
 function MilkContainer() {
   const milk = useSelector((state) => state.milk);
