@@ -24,21 +24,22 @@ const initialState = {
 const userSlice = createSlice({
   name: "users",
   initialState,
-  extraReducers: {
-    [getAsyncUsers.pending]: (state, action) => {
-      state.loading = true;
-      state.data = [];
-      state.error = "";
-    },
-    [getAsyncUsers.fulfilled]: (state, action) => {
-      state.data = action.payload;
-      state.loading = false;
-    },
-    [getAsyncUsers.rejected]: (state, action) => {
-      state.loading = false;
-      state.error = action.payload; //??
-      state.data = [];
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getAsyncUsers.pending, (state) => {
+        state.loading = true;
+        state.data = [];
+        state.error = "";
+      })
+      .addCase(getAsyncUsers.fulfilled, (state, action) => {
+        state.data = action.payload;
+        state.loading = false;
+      })
+      .addCase(getAsyncUsers.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+        state.data = [];
+      });
   },
 });
 
